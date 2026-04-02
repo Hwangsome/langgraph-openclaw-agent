@@ -1,0 +1,23 @@
+[project]
+name = "oc-lg-agent"
+version = "0.1.0"
+description = "Minimal LangGraph agent with OpenClaw ACP entrypoint"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "OpenClaw" }]
+dependencies = [
+  "langchain>=0.3.0",
+  "langgraph>=0.2.0",
+  "langchain-openai>=0.2.0",
+  "python-dotenv>=1.0.1",
+]
+
+[project.scripts]
+oc-lg-agent = "oc_lg_agent.acp_entry:main"
+
+[build-system]
+requires = ["hatchling>=1.21.0"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+# Keeps it uv-friendly.
